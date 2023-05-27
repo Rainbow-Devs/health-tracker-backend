@@ -1,0 +1,7 @@
+{
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "files.trimTrailingWhitespace": true,
+  "indentRainbow.indicatorStyle": "light",
+  "terminal.integrated.scrollback": 10000,
+}
