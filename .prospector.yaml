@@ -1,0 +1,8 @@
+pylint:
+  options:
+    django-settings-module: healthtracker.settings
+
+vulture:
+  enabled: true
+
+strictness: high

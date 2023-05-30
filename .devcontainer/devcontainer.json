@@ -1,0 +1,100 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/javascript-node
+{
+    "name": "Health Tracker Backend Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        // Update 'VARIANT' to pick a Node version: 18, 16, 14.
+        // Append -bullseye or -buster to pin to an OS version.
+        // Use -bullseye variants on local arm64/Apple Silicon.
+        "args": {
+            "VARIANT": "18-bullseye"
+        }
+    },
+    // Configure tool-specific properties.
+    "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+            "donjayamanne.python-extension-pack",
+            "donjayamanne.python-environment-manager",
+            "EditorConfig.EditorConfig",
+            "GitHub.remotehub",
+            "GitHub.vscode-pull-request-github",
+            "gruntfuggly.todo-tree",
+            "mechatroner.rainbow-csv",
+            "ms-azuretools.vscode-docker",
+            "ms-vscode-remote.remote-containers",
+            "ms-vscode.remote-explorer",
+            "ms-vscode.remote-repositories",
+            "ms-vscode-remote.remote-ssh",
+            "ms-vscode-remote.remote-ssh-edit",
+            "ms-vsliveshare.vsliveshare",
+            "oderwat.indent-rainbow",
+            "quicktype.quicktype",
+            "rangav.vscode-thunder-client",
+            "tlahmann.alex-linter",
+            "tyriar.sort-lines",
+            "usernamehw.errorlens"
+        ],
+        "settings": {
+            "editor.formatOnSave": false,
+            "editor.rulers": [80],
+            "editor.wordWrap": "wordWrapColumn",
+            "editor.wordWrapColumn": 80,
+            "files.exclude": {
+                "env": true,
+                "**/env": false
+            },
+            "files.trimTrailingWhitespace": true,
+            "indentRainbow.indicatorStyle": "light",
+            "python.linting.enabled": true,
+            "python.linting.lintOnSave": true,
+            "python.linting.prospectorEnabled": true,
+            "python.linting.prospectorArgs": ["${workspaceFolder}/healthtracker"],
+            "python.venvPath": "${workspaceFolder}/env",
+            "terminal.integrated.defaultProfile.linux": "bash",
+            "terminal.integrated.scrollback": 10000,
+            "todo-tree.general.tags": [
+                "BUG",
+                "HACK",
+                "FIXME",
+                "TODO",
+                "XXX",
+                "[ ]",
+                "[x]",
+                "TODO-APP"
+            ]
+        }
+    }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [8000],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    //   "postCreateCommand": "pnpm install",
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "node",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": true,
+            "version": "os-provided"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "installDirectlyFromGitHubRelease": true,
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "installTools": false
+        }
+    },
+    "remoteEnv": {
+        "DISPLAY": ":0"
+    },
+    "portsAttributes": {
+        "8000": {
+            "label": "Health Tracker Backend",
+            "onAutoForward": "openPreview"
+        }
+    }
+}
