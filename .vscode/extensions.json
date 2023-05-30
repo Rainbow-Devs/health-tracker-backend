@@ -1,20 +1,24 @@
 {
-  "recommendations": [
-    "donjayamanne.python-extension-pack",
-    "EditorConfig.EditorConfig",
-    "GitHub.remotehub",
-    "GitHub.vscode-pull-request-github",
-    "mechatroner.rainbow-csv",
-    "ms-azuretools.vscode-docker",
-    "ms-vscode-remote.remote-containers",
-    "ms-vscode.remote-explorer",
-    "ms-vscode.remote-repositories",
-    "ms-vscode-remote.remote-ssh",
-    "ms-vscode-remote.remote-ssh-edit",
-    "ms-vsliveshare.vsliveshare",
-    "oderwat.indent-rainbow",
-    "quicktype.quicktype",
-    "rangav.vscode-thunder-client",
-    "tlahmann.alex-linter"
-  ]
+    "recommendations": [
+        "donjayamanne.python-extension-pack",
+        "donjayamanne.python-environment-manager",
+        "EditorConfig.EditorConfig",
+        "GitHub.remotehub",
+        "GitHub.vscode-pull-request-github",
+        "gruntfuggly.todo-tree",
+        "mechatroner.rainbow-csv",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode.remote-explorer",
+        "ms-vscode.remote-repositories",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "quicktype.quicktype",
+        "rangav.vscode-thunder-client",
+        "tlahmann.alex-linter",
+        "tyriar.sort-lines",
+        "usernamehw.errorlens"
+    ]
 }
