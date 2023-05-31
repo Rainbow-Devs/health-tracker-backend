@@ -1,7 +1,29 @@
 {
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80,
-  "files.trimTrailingWhitespace": true,
-  "indentRainbow.indicatorStyle": "light",
-  "terminal.integrated.scrollback": 10000,
+    "editor.formatOnSave": false,
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "files.exclude": {
+        "env": true,
+        "**/env": false
+    },
+    "files.trimTrailingWhitespace": true,
+    "indentRainbow.indicatorStyle": "light",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.prospectorEnabled": true,
+    "python.linting.prospectorArgs": ["${workspaceFolder}/healthtracker"],
+    "python.venvPath": "${workspaceFolder}/env",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.scrollback": 10000,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "TODO-APP"
+    ],
 }
