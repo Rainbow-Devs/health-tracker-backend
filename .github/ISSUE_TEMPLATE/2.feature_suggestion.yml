@@ -1,5 +1,5 @@
 name: Feature Suggestion
-description: Suggest a new feature for the Health Tracker frontend app.
+description: Suggest a new feature for the WellPath frontend app.
 labels: ["enhancement"]
 body:
   - type: textarea
@@ -19,17 +19,26 @@ body:
     attributes:
       label: Correct Project Selected
       description:
-        Make sure to select the appropriate project for this bug report before
-        submitting this issue.
+        Make sure to select the appropriate project for this feature suggestion
+        before submitting this issue.
       options:
         - label: This issue is linked to the appropriate project.
           required: true
   - type: checkboxes
     attributes:
-      label: Labels
+      label: Correct Label Selected
       description:
-        Make sure to select the appropriate labels for this bug report before
-        submitting this issue.
+        Make sure to select the appropriate labels for this feature suggestion
+        before submitting this issue.
       options:
         - label: This issue has appropriate labels.
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Correct Milestone Selected
+      description:
+        Make sure to select the appropriate milestone for this feature
+        suggestion before submitting this issue.
+      options:
+        - label: This issue has appropriate milestone.
           required: true
