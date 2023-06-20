@@ -1,7 +1,7 @@
-# Health Tracker Backend
+# WellPath Backend
 
-This is the backend webapp for the Rainbow Devs Health Tracker application. For
-the frontend app, that can be found at
+This is the backend webapp for WellPath, the Rainbow Devs Health Tracker
+application. For the frontend app, that can be found at
 [Rainbow-Devs/health-tracker-frontend](https://github.com/Rainbow-Devs/health-tracker-frontend).
 
 The following steps will share how to get your development machine set up to run
