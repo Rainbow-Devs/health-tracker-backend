@@ -26,4 +26,12 @@
         "[x]",
         "TODO-APP"
     ],
+    "cSpell.words": [
+        "createsuperuser",
+        "GRAPHENE",
+        "healthtracker",
+        "pylint",
+        "runserver",
+        "venv"
+    ],
 }

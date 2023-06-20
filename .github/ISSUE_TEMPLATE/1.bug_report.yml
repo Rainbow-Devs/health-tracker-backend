@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report for the Health Tracker frontend app.
+description: File a bug report for the WellPath frontend app.
 labels: ["bug"]
 body:
   - type: textarea
@@ -16,7 +16,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Actual Behaviour
+      label: Actual Behavior
       description: Describe what the code currently does.
     validations:
       required: true
@@ -45,10 +45,19 @@ body:
           required: true
   - type: checkboxes
     attributes:
-      label: Labels
+      label: Correct Label Selected
       description:
         Make sure to select the appropriate labels for this bug report before
         submitting this issue.
       options:
         - label: This issue has appropriate labels.
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Correct Milestone Selected
+      description:
+        Make sure to select the appropriate milestone for this bug report before
+        submitting this issue.
+      options:
+        - label: This issue has appropriate milestone.
           required: true
