@@ -12,6 +12,8 @@ the backend and start contributing to the repository.
 To prep your computer for Python + Django development, create a virtual Python
 environment and activate it:
 
+(Windows users please note, do this after setting up a WSL2 environment.)
+
 ```bash
 python3 -m venv env
 source env/bin/activate
@@ -143,6 +145,8 @@ services:
         image: rainbow-devs/ht-backend
         ports:
             - "8000:8000"
+        volumes:
+            - ".:/app"
 ```
 
 From there, you can follow these steps to build and run the container image:

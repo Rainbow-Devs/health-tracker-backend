@@ -9,7 +9,7 @@ class LoginPageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect("success")
+            return redirect("login_success")
         return super().get(request, *args, **kwargs)
 
 
