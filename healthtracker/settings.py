@@ -155,5 +155,8 @@ SOCIAL_AUTH_PIPELINE = (
     "social_core.pipeline.user.user_details",
 )
 
-LOGIN_REDIRECT_URL = "/auth/success"
+LOGIN_REDIRECT_URL = "/auth/success/"
 LOGOUT_REDIRECT_URL = "/auth/"
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
