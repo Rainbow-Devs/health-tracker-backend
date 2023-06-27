@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
                     "type",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="base_login.activitytypes",
+                        to="activities.activitytypes",
                     ),
                 ),
             ],

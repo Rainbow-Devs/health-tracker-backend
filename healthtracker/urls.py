@@ -22,5 +22,4 @@ urlpatterns = [
     path("graphql", GraphQLView.as_view(graphiql=True)),
     path("admin/", admin.site.urls),
     path("auth/", include("social_login.urls")),
-    path("user/", include("base_login.urls"))
 ]

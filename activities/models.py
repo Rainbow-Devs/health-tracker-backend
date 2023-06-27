@@ -13,7 +13,8 @@ class ActivityTypes(models.Model):
 # User activities
 class Activities(models.Model):
     name = models.CharField(max_length=255)
-    type = models.ForeignKey('ActivityTypes', on_delete=models.CASCADE)
+    #on_delete=models.SET_NULL in case an activity type gets deleted, the activity and user data does not.
+    type = models.ForeignKey('ActivityTypes', null=True, on_delete=models.SET_NULL)
     user_description = models.TextField()
     duration = models.IntegerField()
     difficulty = models.IntegerField()

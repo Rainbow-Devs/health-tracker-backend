@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "graphene_django",
     "social_login",
-    "base_login"
+    "activities"
 ]
 
 MIDDLEWARE = [
