@@ -40,6 +40,7 @@ Now that you have the required packages installed, let's run the available
 database migrations:
 
 ```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 
@@ -84,17 +85,21 @@ Next,
 [create a new GitHub OAuth application](https://github.com/settings/applications/new).
 These are the field values to use:
 
-**Application name:**
+---
+
+**Application name:**  
 WellPath Backend
 
-**Homepage URL:**
+**Homepage URL:**  
 http://local-backend.wellpath.rainbowdevs.io:8000
 
-**Authorization callback URL:**
+**Authorization callback URL:**  
 http://local-backend.wellpath.rainbowdevs.io:8000/auth/complete/github/
 
-**Enable Device Flow:**
+**Enable Device Flow:**  
 false
+
+---
 
 When you create the application, you can copy and paste the "Client ID"
 parameter into your `.env` file as the value of `GITHUB_CLIENT_ID`. On the same
@@ -114,6 +119,7 @@ To lint your Python code, you can run the following (after activating your
 ```bash
 prospector healthtracker
 prospector social_login
+prospector activities
 ```
 
 This should both lint your code (using `pylint`) as well as check your code
@@ -126,6 +132,11 @@ python manage.py check --deploy
 ```
 
 ## Running with Docker
+
+**This is not a necessary part of getting the backend running locally.** If you have
+reached this point in the instructions and do not specifically need the backend
+to run in Docker, you may stop. You have successfully set up the backend to run
+on your development machine.
 
 There are two ways to create and run the Docker container image: building and
 running manually with Docker or by creating a `docker-compose.yml` file and
