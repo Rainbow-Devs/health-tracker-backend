@@ -11,6 +11,7 @@ defusedxml==0.7.1
 dill==0.3.6
 Django==4.2.1
 django-environ==0.10.0
+djangorestframework==3.14.0
 dodgy==0.2.1
 flake8==5.0.4
 flake8-polyfill==1.0.2
@@ -43,6 +44,7 @@ pylint-django==2.5.3
 pylint-flask==0.6
 pylint-plugin-utils==0.7
 python3-openid==3.2.0
+pytz==2023.3
 PyYAML==6.0
 requests==2.31.0
 requests-oauthlib==1.3.1
@@ -57,7 +59,10 @@ social-auth-core==4.4.2
 sqlparse==0.4.4
 text-unidecode==1.3
 toml==0.10.2
+tomli==2.0.1
 tomlkit==0.11.8
+typing_extensions==4.6.3
+uritemplate==4.1.1
 urllib3==2.0.3
 vulture==2.7
 wrapt==1.15.0

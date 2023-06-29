@@ -1,0 +1,9 @@
+services:
+    health-tracker-backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: health-tracker-backend
+        image: rainbow-devs/ht-backend
+        ports:
+            - "8000:8000"
