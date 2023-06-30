@@ -1,6 +1,8 @@
 # from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.shortcuts import redirect
+from rest_framework.views import APIView, Response
+from rest_framework import status
 
 
 # Create your views here.
@@ -27,3 +29,9 @@ class LoginSuccessView(TemplateView):
         }
 
         return super().get(request, *args, **kwargs)
+
+class UserSessionView(APIView):
+    template_name = "sessions.html"
+    def post(self, request, format=None):
+        # Logic regarding creating user session
+        return Response({'message': 'User session created'}, status=status.HTTP_201_CREATED)
