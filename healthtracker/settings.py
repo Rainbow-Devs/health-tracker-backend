@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "graphene_django",
     "social_login",
+    "activities",
 ]
 
 MIDDLEWARE = [
@@ -95,7 +96,9 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": (
+            "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        ),
     },
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
@@ -158,5 +161,5 @@ SOCIAL_AUTH_PIPELINE = (
 LOGIN_REDIRECT_URL = "/auth/success/"
 LOGOUT_REDIRECT_URL = "/auth/"
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
