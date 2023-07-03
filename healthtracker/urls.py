@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.decorators.csrf import csrf_exempt
 from graphene_django.views import GraphQLView
+from healthtracker.schema import schema
 
 urlpatterns = [
-    path("graphql", GraphQLView.as_view(graphiql=True)),
+    path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
     path("admin/", admin.site.urls),
+    path("activities/", include("activities.urls")),
     path("auth/", include("social_login.urls")),
+    path("user_profiles/", include("user_profiles.urls")),
 ]

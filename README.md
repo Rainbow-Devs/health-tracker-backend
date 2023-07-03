@@ -87,16 +87,16 @@ These are the field values to use:
 
 ---
 
-**Application name:**  
+**Application name:**
 WellPath Backend
 
-**Homepage URL:**  
+**Homepage URL:**
 http://local-backend.wellpath.rainbowdevs.io:8000
 
-**Authorization callback URL:**  
+**Authorization callback URL:**
 http://local-backend.wellpath.rainbowdevs.io:8000/auth/complete/github/
 
-**Enable Device Flow:**  
+**Enable Device Flow:**
 false
 
 ---
@@ -118,8 +118,9 @@ To lint your Python code, you can run the following (after activating your
 
 ```bash
 prospector healthtracker
-prospector social_login
 prospector activities
+prospector social_login
+prospector user_profiles
 ```
 
 This should both lint your code (using `pylint`) as well as check your code
