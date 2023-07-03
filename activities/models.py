@@ -1,8 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Activity Categories
-class ActivityTypes(models.Model):
+class ActivityName(models.Model):
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -12,14 +13,18 @@ class ActivityTypes(models.Model):
 
 
 # User activities
-class Activities(models.Model):
-    name = models.CharField(max_length=255)
+class Activity(models.Model):
+    # on_delete=models.CASCADE in case a user gets deleted.
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     # on_delete=models.SET_NULL in case an activity type gets deleted
     # the activity and user data does not.
-    type = models.ForeignKey("ActivityTypes", null=True, on_delete=models.SET_NULL)
-    user_description = models.TextField()
+    activity_name = models.OneToOneField(
+        ActivityName, on_delete=models.SET_NULL, null=True
+    )
+    user_description = models.TextField(max_length=255)
     duration = models.IntegerField()
     difficulty = models.IntegerField()
+    start_time = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
