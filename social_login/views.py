@@ -19,7 +19,9 @@ class LoginSuccessView(TemplateView):
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated is not True:
             return redirect("login_page")
-        return redirect("http://local-frontend.wellpath.rainbowdevs.io:3000/")
+        return redirect(
+            "http://local-frontend.wellpath.rainbowdevs.io:3000/user/profile"
+        )
 
         # self.extra_context = {
         #     "username": self.request.user.get_username(),

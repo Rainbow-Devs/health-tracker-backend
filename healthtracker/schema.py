@@ -78,7 +78,7 @@ class Query(graphene.ObjectType):
         # We can easily optimize query count in the resolve method
         return ActivityName.objects.all()
 
-    def resolve_user_profile_by_sid(self, sid):
+    def resolve_user_profile_by_sid(self, info, sid):
         try:
             session = Session.objects.get(session_key=sid)
             session_data = session.get_decoded()
@@ -90,7 +90,7 @@ class Query(graphene.ObjectType):
         except UserProfile.DoesNotExist:
             return None
 
-    def resolve_activities_by_sid(self, sid):
+    def resolve_activities_by_sid(self, info, sid):
         try:
             session = Session.objects.get(session_key=sid)
             session_data = session.get_decoded()
