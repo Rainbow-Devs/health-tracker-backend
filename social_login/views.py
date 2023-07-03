@@ -14,16 +14,17 @@ class LoginPageView(TemplateView):
 
 
 class LoginSuccessView(TemplateView):
-    template_name = "user.html"
+    # template_name = "user.html"
 
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated is not True:
             return redirect("login_page")
+        return redirect("http://local-frontend.wellpath.rainbowdevs.io:3000/")
 
-        self.extra_context = {
-            "username": self.request.user.get_username(),
-            "session_id": self.request.session.session_key,
-            "email_address": self.request.user.email,
-        }
+        # self.extra_context = {
+        #     "username": self.request.user.get_username(),
+        #     "session_id": self.request.session.session_key,
+        #     "email_address": self.request.user.email,
+        # }
 
-        return super().get(request, *args, **kwargs)
+        # return super().get(request, *args, **kwargs)
